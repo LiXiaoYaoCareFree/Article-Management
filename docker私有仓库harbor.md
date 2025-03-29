@@ -161,13 +161,7 @@ https://harbor
 `vim /etc/docker/daemon.json`
 
 ```json
-{ "registry-mirrors": ["https://rsbud4vc.mirror.aliyuncs.com","https://registry.docker
-
-cn.com","https://docker.mirrors.ustc.edu.cn","https://dockerhub.azk8s.cn","http://hub
-
-mirror.c.163.com"],
-
-"insecure-registries": ["192.168.179.140","harbor"]
+{ "registry-mirrors": ["https://rsbud4vc.mirror.aliyuncs.com","https://registry.docker-cn.com","https://docker.mirrors.ustc.edu.cn","https://dockerhub.azk8s.cn","http://hub-mirror.c.163.com"],"insecure-registries":  ["192.168.179.140","harbor"]
 }
 ```
 
@@ -223,8 +217,8 @@ Login Succeeded
 
 在 CentOS 7 机器上删除镜像
 
-[root@xianchaomaster1 ~]# docker rmi -f 1192.168.179.140/test/tomcat:v1
+`docker rmi -f 1192.168.179.140/test/tomcat:v1`
 
 拉取镜像
 
-[root@xianchaomaster1 ~]#docker pull 192.168.179.140/test/tomcat:v1
+`docker pull 192.168.179.140/test/tomcat:v1`
